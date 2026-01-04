@@ -6,10 +6,8 @@ import java.util.Properties
 plugins {
     id("java")
     id("jacoco")
-    id("com.github.spacialcircumstances.gradle-cucumber-reporting") version "0.1.25"
-    id("org.sonarqube") version "4.4.1.3373"
+    id("org.sonarqube") version "7.2.2.6593"
     id("maven-publish")
-
 }
 
 group = "com.example"
@@ -17,10 +15,6 @@ version = "1.0-SNAPSHOT"
 
 
 
-tasks.test {
-    finalizedBy("jacocoTestReport")
-    finalizedBy("sonar")
-}
 
 publishing {
     publications {
